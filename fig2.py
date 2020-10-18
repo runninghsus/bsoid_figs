@@ -29,13 +29,13 @@ c = str(['indianred', 'indianred',
          'royalblue', 'royalblue', 'royalblue', 'royalblue',
          'mediumseagreen', 'mediumseagreen', 'mediumseagreen'])
 
-# p = subprocess.Popen([sys.executable, './kfold_accuracy.py',
+# p = subprocess.Popen([sys.executable, './subroutines/kfold_accuracy.py',
 #                       '-p', path, '-f', name,
 #                       '-o', order, '-k', k, '-v', var])
 # p.communicate()
 # p.kill()
 
-p = subprocess.Popen([sys.executable, './accuracy_boxplot.py',
+p = subprocess.Popen([sys.executable, './subroutines/accuracy_boxplot.py',
                       '-p', path, '-f', name, '-v', var,
                       '-a', algorithm, '-c', c, '-m', fig_format, '-o', outpath])
 p.communicate()
@@ -52,7 +52,7 @@ time_range = str([(20*60+42) * 60 - 1, (20*60+44) * 60]) # headgroom 2 scratch
 order1 = str([0, 2])
 order2 = str([1, 3])
 c = str(['coral', 'cyan'])
-p = subprocess.Popen([sys.executable, './trajectory_plot.py',
+p = subprocess.Popen([sys.executable, './subroutines/trajectory_plot.py',
                       '-p', path, '-f', name, '-i', animal_index, '-b', bodyparts, '-t', time_range,
                       '-r', order1, '-R', order2, '-c', c, '-m', fig_format, '-o', outpath])
 p.communicate()
@@ -63,7 +63,7 @@ print('Preparing limb trajectories as xxx.{} found in fig2d/g left...'.format(fi
 print('\n' * 1)
 
 time_range = str([int((11*60+19.5)*60-1), int((11*60+21.5)*60)])
-p = subprocess.Popen([sys.executable, './trajectory_plot.py',
+p = subprocess.Popen([sys.executable, './subroutines/trajectory_plot.py',
                       '-p', path, '-f', name, '-i', animal_index, '-b', bodyparts, '-t', time_range,
                       '-r', order1, '-R', order2, '-c', c, '-m', fig_format, '-o', outpath])
 p.communicate()
@@ -83,7 +83,7 @@ order = str([4, 5, 7, 0, 3, 1, 6, 8, 9, 10])
 time = '300000'
 var = 'coherence_data'
 
-p = subprocess.Popen([sys.executable, './frameshift_coherence.py',
+p = subprocess.Popen([sys.executable, './subroutines/frameshift_coherence.py',
                       '-p', path, '-n', name, '-f', fps, '-F', target_fps, '-s', frame_skips,
                       '-i', animal_index, '-o', order, '-t', time, '-v', var])
 p.communicate()
@@ -92,7 +92,7 @@ p.kill()
 algorithm = 'Randomforests'
 c = 'k'
 
-p = subprocess.Popen([sys.executable, './coherence_boxplot.py',
+p = subprocess.Popen([sys.executable, './subroutines/coherence_boxplot.py',
                       '-p', path, '-f', name, '-v', var,
                       '-a', algorithm, '-c', c, '-m', fig_format, '-o', outpath])
 p.communicate()

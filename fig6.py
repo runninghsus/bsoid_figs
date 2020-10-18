@@ -18,7 +18,7 @@ variables = str(['c_hg_len_N4_1', 'a_hg_len_N4_1'])
 c = str(['deepskyblue', 'red'])
 x_range = str([0, 2])
 
-p = subprocess.Popen([sys.executable, './kinematics_cdf.py',
+p = subprocess.Popen([sys.executable, './subroutines/kinematics_cdf.py',
                       '-p', path, '-v', variables,
                       '-c', c, '-r', x_range, '-m', fig_format, '-o', outpath])
 p.communicate()
@@ -33,7 +33,7 @@ variables = str(['c_fg_len_N4_1', 'a_fg_len_N4_1'])
 c = str(['deepskyblue', 'red'])
 x_range = str([0, 2])
 
-p = subprocess.Popen([sys.executable, './kinematics_cdf.py',
+p = subprocess.Popen([sys.executable, './subroutines/kinematics_cdf.py',
                       '-p', path, '-v', variables,
                       '-c', c, '-r', x_range, '-m', fig_format, '-o', outpath])
 p.communicate()
@@ -48,7 +48,7 @@ variables = str(['c_it_len_N4_1', 'a_it_len_N4_1'])
 c = str(['deepskyblue', 'red'])
 x_range = str([1, 5])
 
-p = subprocess.Popen([sys.executable, './kinematics_cdf.py',
+p = subprocess.Popen([sys.executable, './subroutines/kinematics_cdf.py',
                       '-p', path, '-v', variables,
                       '-c', c, '-r', x_range, '-m', fig_format, '-o', outpath])
 p.communicate()
