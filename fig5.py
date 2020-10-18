@@ -20,7 +20,7 @@ c_range = str([0, 2])
 cline = 'steelblue'
 n = '4'
 colorbar = '0'
-p = subprocess.Popen([sys.executable, './subroutines/immse_heatmap2.py',
+p = subprocess.Popen([sys.executable, './subroutines/immse_heatmap.py',
                       '-p', path, '-a', algorithm,
                       '-c', c, '-r', c_range, '-n', n, '-l', cline, '-m', fig_format, '-o', outpath, '-b', colorbar])
 p.communicate()
@@ -29,7 +29,7 @@ p.kill()
 algorithm = 'B-SOiD'
 cline = 'hotpink'
 
-p = subprocess.Popen([sys.executable, './subroutines/immse_heatmap2.py',
+p = subprocess.Popen([sys.executable, './subroutines/immse_heatmap.py',
                       '-p', path, '-a', algorithm,
                       '-c', c, '-r', c_range, '-n', n, '-l', cline, '-m', fig_format, '-o', outpath, '-b', colorbar])
 p.communicate()
@@ -44,7 +44,7 @@ x_range = str([0, 2])
 fig_format = 'png'
 outpath = '/Volumes/Elements/Manuscripts/B-SOiD/bsoid_natcomm/figure_panels/motion_energy/'
 
-p = subprocess.Popen([sys.executable, './subroutines/immse_cdf2.py',
+p = subprocess.Popen([sys.executable, './subroutines/immse_cdf.py',
                       '-p', path,
                       '-c', c, '-r', x_range, '-m', fig_format, '-o', outpath])
 p.communicate()
