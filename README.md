@@ -15,7 +15,11 @@ Runs the following subroutines
 `./subroutines/accuracy_boxplot.py -p, path, -f, file, -v, variable_filename, -a, algorithm, -c, c, 
 -m, fig_format, -o, outpath`
 
-<img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/Randomforests_Kfold_accuracy.png" width="350">
+
+<p align="center">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/Randomforests_Kfold_accuracy.png" width="200">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/Randomforests_frameshift_coherence.png" width="200">
+</p>
 
 * Plots limb trajectories for behaviors.
 
