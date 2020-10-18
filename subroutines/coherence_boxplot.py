@@ -2,7 +2,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import figure
 import numpy as np
-from utils.load_data import load_sav
+from utilities.load_data import load_sav
 import sys, getopt
 
 

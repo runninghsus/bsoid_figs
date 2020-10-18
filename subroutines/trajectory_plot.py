@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import figure
-from utils.load_data import appdata
-from utils.processing import data_processing
+from utilities.load_data import appdata
+from utilities.processing import data_processing
 import sys, getopt
 from ast import literal_eval
 

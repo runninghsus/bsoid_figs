@@ -1,7 +1,7 @@
 import numpy as np
-from utils.load_data import appdata
+from utilities.load_data import appdata
 from kfold_accuracy import reorganize_accuracy
-from utils.save_data import results
+from utilities.save_data import results
 import sys, getopt
 from ast import literal_eval
 

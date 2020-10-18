@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import figure
 import numpy as np
-from utils.load_data import load_mat
+from utilities.load_data import load_mat
 import sys, getopt
 from ast import literal_eval
 

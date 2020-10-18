@@ -2,8 +2,8 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import KFold
 from operator import itemgetter
-from utils.load_data import appdata
-from utils.save_data import results
+from utilities.load_data import appdata
+from utilities.save_data import results
 import sys, getopt
 from ast import literal_eval
 
