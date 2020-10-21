@@ -124,7 +124,7 @@ def main(argv):
     print('FIG FORMAT   :', fig_format)
     print('OUT PATH   :', outpath)
     print('*' * 50)
-    print('Computing...')
+    print('Plotting...')
     labels, limbs = limb_trajectory(path, name, int(animal_idx), literal_eval(bp), literal_eval(t_range))
     plot_trajectory(limbs, labels, literal_eval(t_range), literal_eval(order1), literal_eval(order2), literal_eval(c),
                     (8.5, 16), fig_format, outpath)
