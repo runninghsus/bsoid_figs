@@ -33,8 +33,10 @@ def plot_pose_relationships(path, name, order, fig_size, fig_format, outpath):
     for f in range(f_10fps_sub.shape[1]):
         fig = figure(num=None, figsize=fig_size, dpi=300, facecolor='w', edgecolor='k')
         fig.suptitle("{}".format(POSE_RELATIONSHIPS[f]), fontsize=30)
+        k = 0
         for i in order:
-            ax = plt.subplot(len(np.unique(assignments)), 1, i + 2)
+            k += 1
+            ax = plt.subplot(len(np.unique(assignments)), 1, k)
             if f <= m or f > m + n + 1:
                 values, base = np.histogram(f_10fps_sub[assignments == i, f] / 23.5126,
                                             bins=np.linspace(0, np.mean(f_10fps_sub[assignments == i, f] / 23.5126) +
@@ -45,7 +47,7 @@ def plot_pose_relationships(path, name, order, fig_size, fig_format, outpath):
                                             density=False)
                 values = np.append(values, 0)
                 ax.plot(base, values,
-                        color=cm[i], marker='None', linestyle='-', linewidth=5)
+                        color=cm[k-1], marker='None', linestyle='-', linewidth=5)
 
                 ax.set_xlim(0, np.mean(f_10fps_sub[:, f] / 23.5126) + 3 * np.std(f_10fps_sub[:, f] / 23.5126))
                 if i < len(np.unique(assignments)) - 2:
@@ -53,8 +55,8 @@ def plot_pose_relationships(path, name, order, fig_size, fig_format, outpath):
                     ax.tick_params(axis='y', which='both', right=False, labelright=False, labelsize=16)
                 else:
                     ax.tick_params(labelsize=16)
-                    ax.set_xticks(np.linspace(0, np.mean(f_10fps_sub[assignments == i, f]) +
-                                              3 * np.std(f_10fps_sub[assignments == i, f]), num=5))
+                    ax.set_xticks(np.linspace(0, np.mean(f_10fps_sub[:, f] / 23.5126) +
+                                              3 * np.std(f_10fps_sub[:, f] / 23.5126), num=5))
                     fig.text(0.5, 0.07, 'Centimeters', ha='center', fontsize=16)
                     fig.text(0.03, 0.5, 'Probability', va='center', rotation='vertical', fontsize=16)
             else:
@@ -68,7 +70,7 @@ def plot_pose_relationships(path, name, order, fig_size, fig_format, outpath):
                                             density=False)
                 values = np.append(values, 0)
                 ax.plot(base, values,
-                        color=cm[i], marker='None', linestyle='-', linewidth=5)
+                        color=cm[k-1], marker='None', linestyle='-', linewidth=5)
                 ax.set_xlim(np.mean(f_10fps_sub[:, f]) - 3 * np.std(f_10fps_sub[:, f]),
                             np.mean(f_10fps_sub[:, f]) + 3 * np.std(f_10fps_sub[:, f]))
                 if i < len(np.unique(assignments)) - 2:
@@ -76,10 +78,10 @@ def plot_pose_relationships(path, name, order, fig_size, fig_format, outpath):
                     ax.tick_params(axis='y', which='both', right=False, labelright=False, labelsize=16)
                 else:
                     ax.tick_params(labelsize=16)
-                    ax.set_xticks(np.linspace(np.mean(f_10fps_sub[assignments == i, f]) -
-                                              3 * np.std(f_10fps_sub[assignments == i, f]),
-                                              np.mean(f_10fps_sub[assignments == i, f]) +
-                                              3 * np.std(f_10fps_sub[assignments == i, f]), num=5))
+                    ax.set_xticks(np.linspace(np.mean(f_10fps_sub[:, f]) -
+                                              3 * np.std(f_10fps_sub[:, f]),
+                                              np.mean(f_10fps_sub[:, f]) +
+                                              3 * np.std(f_10fps_sub[:, f]), num=5))
                     fig.text(0.5, 0.07, 'Degrees', ha='center', fontsize=16)
                     fig.text(0.03, 0.5, 'Probability', va='center', rotation='vertical', fontsize=16)
         plt.savefig(str.join('', (outpath, '{}_histogram.'.format(POSE_RELATIONSHIPS[f]), fig_format)),
