@@ -49,7 +49,7 @@ def plot_cdf(data, c, x_range, fig_size, fig_format, outpath):
     ax.set_ylim(0, 1)
     ax.set_axisbelow(True)
     ax.grid(False)
-    ax.set_xticks(np.arange(x_range[0], x_range[1]+0.1, (x_range[1]-x_range[0])/4))
+    ax.set_xticks(np.arange(x_range[0], x_range[1]+0.1, (x_range[1]-x_range[0])/3))
     ax.set_yticks(np.arange(0, 1.1, 0.2))
     ax.xaxis.set_ticklabels([])
     ax.yaxis.set_ticklabels([])
@@ -103,9 +103,9 @@ def main(argv):
     print('*' * 50)
     print('Plotting...')
     mat = load_mat(path)
-    data = [mat['mm_within_vec2_sc'], mat['mm_between_vec2_sc'],
-            mat['bsf_within_vec2_sc'], mat['bsf_between_vec2_sc'],
-            mat['sbsf_within_vec2_sc'], mat['sbsf_between_vec2_sc']]
+    data = [mat['mm_within_vec2'], mat['mm_between_vec2'],
+            mat['bsf_within_vec2'], mat['bsf_between_vec2'],
+            mat['sbsf_within_vec2'], mat['sbsf_between_vec2']]
     plot_cdf(data, literal_eval(c), literal_eval(x_range), (16, 13), fig_format, outpath)
 
 

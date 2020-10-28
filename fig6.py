@@ -17,7 +17,7 @@ print('\n' * 1)
 variables = str(['c_hg_len_N4_1', 'a_hg_len_N4_1'])
 c = str(['deepskyblue', 'red'])
 x_range = str([0, 2])
-leg = '1'
+leg = '0'
 
 p = subprocess.Popen([sys.executable, './subroutines/kinematics_cdf.py',
                       '-p', path, '-v', variables,
@@ -55,7 +55,7 @@ print('\n' * 1)
 variables = str(['c_fg_len_N4_1', 'a_fg_len_N4_1'])
 c = str(['deepskyblue', 'red'])
 x_range = str([0, 2])
-leg = '1'
+leg = '0'
 
 p = subprocess.Popen([sys.executable, './subroutines/kinematics_cdf.py',
                       '-p', path, '-v', variables,

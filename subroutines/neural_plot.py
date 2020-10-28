@@ -7,20 +7,19 @@ import sys, getopt
 from ast import literal_eval
 
 
-def plot_heatmap(algo, data, c, c_range, discrete_n, delim, cl, fig_size, fig_format, outpath, cb=False):
+def plot_neural_heatmap(algo, data, c, c_range, discrete_n, delim, cl, fig_size, fig_format, outpath, cb=False):
     figure(num=None, figsize=fig_size, dpi=300, facecolor='w', edgecolor='k')
     ax = plt.subplot()
     cm = sns.diverging_palette(275, 35, center='light', s=100, l=70, n=5)
     # cm = sns.light_palette(c, n_colors=discrete_n)
-    sns.heatmap(data, vmin=c_range[0], vmax=c_range[1], center=1, cmap=cm, cbar=cb, ax=ax)
+    # for i in range(len(data)):
+    sns.heatmap(data, vmin=c_range[0], vmax=c_range[1], center=0, cmap=cm, cbar=cb, ax=ax)
     # sns.heatmap(data, vmin=c_range[0], vmax=c_range[1], cmap=cm, cbar=cb, ax=ax)
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
     ax.spines['bottom'].set_visible(False)
     ax.spines['left'].set_visible(False)
-    for i in range(delim.shape[1]):
-        plt.axvline(x=np.cumsum(delim)[i] - 1, linewidth=4, linestyle='--', color=cl)
-        plt.axhline(y=np.cumsum(delim)[i], linewidth=4, linestyle='--', color=cl)
+    plt.axvline(x=delim - 1, linewidth=4, linestyle='--', color=cl)
     ax.set_xticks([])
     ax.set_yticks([])
     ax.xaxis.set_ticklabels([])
@@ -28,7 +27,7 @@ def plot_heatmap(algo, data, c, c_range, discrete_n, delim, cl, fig_size, fig_fo
     if cb:
         cax = plt.gcf().axes[-1]
         cax.tick_params(length=20, width=5, color='k')
-    plt.savefig(str.join('', (outpath, algo, '_mse_matrix.', fig_format)), format=fig_format, transparent=True)
+    plt.savefig(str.join('', (outpath, algo, '_neuralheatmap.', fig_format)), format=fig_format, transparent=True)
 
 
 def main(argv):
@@ -78,13 +77,12 @@ def main(argv):
     print('*' * 50)
     print('Plotting...')
     mat = load_mat(path)
-    if algorithm == 'MotionMapper':
-        data = mat['mm_mat_norm2_']
-        delim = mat['mm_mse_counts']
-    elif algorithm == 'B-SOiD':
-        data = mat['bsf_mat_norm2_']
-        delim = mat['bsf_mse_counts']
-    plot_heatmap(algorithm, data, c, literal_eval(c_range), int(discrete_n), delim, cline,
+    if algorithm == 'non-frameshifted':
+        data = mat['l5neural']['nonfs'][0]
+    elif algorithm == 'frameshifted':
+        data = mat['l5neural']['fs'][0]
+    delim = 200
+    plot_neural_heatmap(algorithm, data[10], c, literal_eval(c_range), int(discrete_n), delim, cline,
                  (16, 14), fig_format, outpath, bool(int(cb)))
 
 

@@ -92,7 +92,7 @@ def main(argv):
     mat = load_mat(path)
     data = [mat[literal_eval(var)[0]][0], mat[literal_eval(var)[1]][0]]
     plot_cdf(literal_eval(var), data, literal_eval(c), literal_eval(x_range),
-             0.01, 4, int(leg), (16, 16), fig_format, outpath)
+             0.01, 4, int(leg), (16, 12), fig_format, outpath)
 
 
 if __name__ == '__main__':

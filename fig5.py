@@ -16,8 +16,8 @@ print('Preparing image MSE comparison matrix as xxx.{} found in fig5b...'.format
 print('\n' * 1)
 algorithm = 'MotionMapper'
 c = 'Orange'
-c_range = str([0, 2])
-cline = 'steelblue'
+c_range = str([0, 3])
+cline = 'deepskyblue'
 n = '4'
 colorbar = '0'
 p = subprocess.Popen([sys.executable, './subroutines/immse_heatmap.py',
@@ -39,8 +39,9 @@ p.kill()
 print('\n' * 1)
 print('Preparing image MSE cdf curves as xxx.{} found in fig5c...'.format(fig_format))
 print('\n' * 1)
-c = str(['steelblue', 'hotpink', 'gray'])
-x_range = str([0, 2])
+# c = str(['deepskyblue', 'hotpink', 'gray'])
+c = str(['deepskyblue', 'hotpink', 'black'])
+x_range = str([0, 3])
 fig_format = 'png'
 outpath = '/Volumes/Elements/Manuscripts/B-SOiD/bsoid_natcomm/figure_panels/motion_energy/'
 

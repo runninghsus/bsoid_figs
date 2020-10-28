@@ -69,6 +69,7 @@ def main(argv):
     print('ANIMAL INDEX   :', animal_index)
     print('TIME   :', t)
     print('ORDER    :', order)
+    print('VARIABLE   :', vname)
     print('*' * 50)
     print('Computing...')
     coherence_reordered = generate_coherence(path, name, int(fps), int(target_fps), literal_eval(frame_skips),

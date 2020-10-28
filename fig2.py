@@ -1,6 +1,6 @@
 import sys
 import subprocess
-
+import os
 
 print('\n \n \n MODEL PERFORMANCE \n \n \n')
 path = '/Volumes/Elements/B-SOID/output3/'
@@ -8,6 +8,24 @@ fig_format = 'png'
 outpath = '/Volumes/Elements/Manuscripts/B-SOiD/bsoid_natcomm/figure_panels/model_performance/'
 print('\n DATA FROM {} \n'.format(path))
 print('-' * 50)
+
+
+# FIG2A
+vidpath = '/Volumes/Elements/B-SOID/datasets/'
+mp4name = '080219/mp4s/'
+projectname = '2019-08-02_10-56-50cut30min_1hrDeepCut_resnet50_OpenFieldHighResApr8shuffle1_1030000/'
+for g in range(11):
+    for e in range(5):
+        mp4file = 'group_{}_example_{}.mp4'.format(g, e)
+        if os.path.exists(str.join('', (vidpath, mp4name, projectname, mp4file))):
+            var = str.join('', (mp4file.partition('.')[0], '_images'))
+
+            p = subprocess.Popen([sys.executable, './subroutines/extract_images.py',
+                                  '-p', vidpath, '-n', mp4name, '-f', projectname,
+                                  '-g', mp4file, '-v', var])
+            p.communicate()
+            p.kill()
+
 
 # FIG2B
 print('\n' * 1)
@@ -79,7 +97,8 @@ fps = '200'
 target_fps = '600'
 frame_skips = str([60, 30, 12, 6, 4])
 animal_index = '0'
-order = str([4, 5, 7, 0, 3, 1, 6, 8, 9, 10])
+# order = str([4, 5, 7, 0, 3, 1, 6, 8, 9, 10])
+order = str([4, 5, 7, 0, 1, 6, 8, 9, 10])
 time = '300000'
 var = 'coherence_data'
 
