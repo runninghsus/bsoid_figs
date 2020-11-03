@@ -21,7 +21,7 @@ def plot_enhanced_umap(path, name, fig_size, fig_format, outpath):
             idx = np.where(np.array(assignments) == g)
             ax.scatter(umap_x[idx], umap_y[idx], c=cmap[g],
                        label=g+1, s=50, marker='o', alpha=0.6)
-    plt.legend(ncol=4, loc=0, prop={'family': 'Helvetica', 'size': 28})
+    plt.legend(ncol=3, loc=0, prop={'family': 'Helvetica', 'size': 28})
     ax.xaxis.set_ticklabels([])
     ax.yaxis.set_ticklabels([])
     ax.spines['top'].set_visible(True)

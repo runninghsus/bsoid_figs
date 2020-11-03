@@ -15,7 +15,7 @@ print('-' * 50)
 print('\n' * 1)
 print('Preparing UMAP + HDBSCAN xxx.{} found in fig S2...'.format(fig_format))
 print('\n' * 1)
-name = 'exercise_30fps_N2'
+name = 'exercise_30fps_n2fixed'
 
 p = subprocess.Popen([sys.executable, './subroutines/umap_clustering_plot.py',
                       '-p', path, '-f', name, '-m', fig_format, '-o', outpath])
@@ -25,10 +25,10 @@ p.kill()
 
 # FIG S2
 vidpath = '/Volumes/Elements/exercise_data/'
-mp4name = 'test2/mp4s/'
-projectname = 'eric_exercise_1min/'
-for g in range(16):
-    for e in range(5):
+mp4name = 'TEST/mp4s/'
+projectname = 'eric_exercise_fixed/'
+for g in range(20):
+    for e in range(10):
         mp4file = 'group_{}_example_{}.mp4'.format(g, e)
         if os.path.exists(str.join('', (vidpath, mp4name, projectname, mp4file))):
             var = str.join('', (mp4file.partition('.')[0], '_images'))
@@ -41,10 +41,10 @@ for g in range(16):
 
 # FIG S2
 vidpath = '/Volumes/Elements/exercise_data/'
-mp4name = 'train1/mp4s/'
-projectname = 'Andy_exercise2/'
-for g in range(16):
-    for e in range(5):
+mp4name = 'TRAIN/mp4s/'
+projectname = 'Andy_exercise2_fixed/'
+for g in range(20):
+    for e in range(10):
         mp4file = 'group_{}_example_{}.mp4'.format(g, e)
         if os.path.exists(str.join('', (vidpath, mp4name, projectname, mp4file))):
             var = str.join('', (mp4file.partition('.')[0], '_images'))

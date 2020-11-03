@@ -38,9 +38,9 @@ def plot_pose_relationships(path, name, order, fig_size, fig_format, outpath):
             k += 1
             ax = plt.subplot(len(np.unique(assignments)), 1, k)
             if f <= m or f > m + n + 1:
-                values, base = np.histogram(f_10fps_sub[assignments == i, f] / 23.5126,
-                                            bins=np.linspace(0, np.mean(f_10fps_sub[assignments == i, f] / 23.5126) +
-                                                             3 * np.std(f_10fps_sub[assignments == i, f] / 23.5126),
+                values, base = np.histogram(f_10fps_sub[assignments == i, f] / 14.7553,
+                                            bins=np.linspace(0, np.mean(f_10fps_sub[assignments == i, f] / 14.7553) +
+                                                             3 * np.std(f_10fps_sub[assignments == i, f] / 14.7553),
                                                              num=50),
                                             weights=np.ones(len(f_10fps_sub[assignments == i, f])) /
                                                     len(f_10fps_sub[assignments == i, f]),
@@ -49,14 +49,14 @@ def plot_pose_relationships(path, name, order, fig_size, fig_format, outpath):
                 ax.plot(base, values,
                         color=cm[k-1], marker='None', linestyle='-', linewidth=5)
 
-                ax.set_xlim(0, np.mean(f_10fps_sub[:, f] / 23.5126) + 3 * np.std(f_10fps_sub[:, f] / 23.5126))
+                ax.set_xlim(0, np.mean(f_10fps_sub[:, f] / 14.7553) + 3 * np.std(f_10fps_sub[:, f] / 14.7553))
                 if i < len(np.unique(assignments)) - 2:
                     ax.tick_params(axis='x', which='both', bottom=False, top=False, labelbottom=False, labelsize=16)
                     ax.tick_params(axis='y', which='both', right=False, labelright=False, labelsize=16)
                 else:
                     ax.tick_params(labelsize=16)
-                    ax.set_xticks(np.linspace(0, np.mean(f_10fps_sub[:, f] / 23.5126) +
-                                              3 * np.std(f_10fps_sub[:, f] / 23.5126), num=5))
+                    ax.set_xticks(np.linspace(0, np.mean(f_10fps_sub[:, f] / 14.7553) +
+                                              3 * np.std(f_10fps_sub[:, f] / 14.7553), num=5))
                     fig.text(0.5, 0.07, 'Centimeters', ha='center', fontsize=16)
                     fig.text(0.03, 0.5, 'Probability', va='center', rotation='vertical', fontsize=16)
             else:
