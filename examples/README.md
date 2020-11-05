@@ -6,13 +6,31 @@ Runs the following subroutines
 
 ### BOTTOM UP CAMERA -- 11 GROUPS  
 
+<p align="center">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/behavioral_videos/inactive_hstacked.mp4" width="300">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/investigate_hstacked.mp4" width="900">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/rear_minus_hstacked.mp4" width="900">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/rear_plus_hstacked.mp4" width="900">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/face_groom_hstacked.mp4" width="900">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/head_groom_hstacked.mp4" width="900">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/body_groom_hstacked.mp4" width="900">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/itch_hstacked.mp4" width="900">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/orient_L_hstacked.mp4" width="900">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/orient_R_hstacked.mp4" width="900">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/locomote_hstacked.mp4" width="900">
+</p>
+
+
+
+
+
 * [Plots pose relationships bottom-up](../subroutines/pose_relationships_hist.py) for each segmented behavior.
 This also converts pixels to centimeters with a scale of 23.5126 pixels/cm
 
 `../subroutines/pose_relationships_hist.py -p, path, -f, name,
                       -r, order, -m, fig_format, -o, outpath`
 
-                    
+             
 ##### Any two pair distances bottom up camera
 <p align="center">
   <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/['distance between points:', 1, 2]_histogram.png" width="300">
