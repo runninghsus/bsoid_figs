@@ -7,17 +7,17 @@ Runs the following subroutines
 ### BOTTOM UP CAMERA -- 11 GROUPS  
 
 <p align="center">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/behavioral_videos/inactive_hstacked.mp4" width="300">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/investigate_hstacked.mp4" width="900">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/rear_minus_hstacked.mp4" width="900">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/rear_plus_hstacked.mp4" width="900">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/face_groom_hstacked.mp4" width="900">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/head_groom_hstacked.mp4" width="900">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/body_groom_hstacked.mp4" width="900">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/itch_hstacked.mp4" width="900">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/orient_L_hstacked.mp4" width="900">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/orient_R_hstacked.mp4" width="900">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/locomote_hstacked.mp4" width="900">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/behavioral_videos/inactive_hstacked.gif" width="300">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/investigate_hstacked.gif" width="900">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/rear_minus_hstacked.gif" width="900">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/rear_plus_hstacked.gif" width="900">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/face_groom_hstacked.gif" width="900">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/head_groom_hstacked.gif" width="900">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/body_groom_hstacked.gif" width="900">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/itch_hstacked.gif" width="900">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/orient_L_hstacked.gif" width="900">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/orient_R_hstacked.gif" width="900">
+  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/locomote_hstacked.gif" width="900">
 </p>
 
 
