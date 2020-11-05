@@ -5,20 +5,72 @@
 Runs the following subroutines
 
 ### BOTTOM UP CAMERA -- 11 GROUPS  
+<p align="center">
+  INACTIVE
+</p>
+
+![inactive 0.25x](behavioral_videos/inactive_hstacked.gif)
 
 <p align="center">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/behavioral_videos/inactive_hstacked.gif" width="300">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/investigate_hstacked.gif" width="900">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/rear_minus_hstacked.gif" width="900">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/rear_plus_hstacked.gif" width="900">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/face_groom_hstacked.gif" width="900">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/head_groom_hstacked.gif" width="900">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/body_groom_hstacked.gif" width="900">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/itch_hstacked.gif" width="900">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/orient_L_hstacked.gif" width="900">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/orient_R_hstacked.gif" width="900">
-  <img src="https://github.com/runninghsus/bsoid_figs/blob/main/examples/pose_relationships/locomote_hstacked.gif" width="900">
+  INVESTIGATE
 </p>
+
+![investigate 0.25x](behavioral_videos/investigate_hstacked.gif)
+
+<p align="center">
+  REAR (-)
+</p>
+
+![rear (-) 0.25x](behavioral_videos/rear_minus_hstacked.gif)
+
+<p align="center">
+  REAR (+)
+</p>
+
+![rear (+) 0.25x](behavioral_videos/rear_plus_hstacked.gif)
+
+<p align="center">
+  FACE GROOM
+</p>
+
+![face groom 0.25x](behavioral_videos/face_groom_hstacked.gif)
+
+<p align="center">
+  HEAD GROOM
+</p>
+
+![head groom 0.25x](behavioral_videos/head_groom_hstacked.gif)
+
+<p align="center">
+  BODY LICK
+</p>
+
+![body lick 0.25x](behavioral_videos/body_groom_hstacked.gif)
+
+<p align="center">
+  ITCH
+</p>
+
+![itch 0.25x](behavioral_videos/itch_hstacked.gif)
+
+<p align="center">
+  ORIENT LEFT
+</p>
+
+![orient left 0.25x](behavioral_videos/orient_L_hstacked.gif)
+
+<p align="center">
+  ORIENT RIGHT
+</p>
+
+![orient right 0.25x](behavioral_videos/orient_R_hstacked.gif)
+
+<p align="center">
+  LOCOMOTE
+</p>
+
+![locomote 0.25x](behavioral_videos/locomote_hstacked.gif)
+
 
 
 
